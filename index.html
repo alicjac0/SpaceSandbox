@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="physics.js" defer></script>
+</head>
+<body> 
+    
+    <aside>
+        <h1>Cosmic Sandbox</h1>
+    <section class="bodyConfiguration">
+        <h3>Body Configuration</h3>
+        <div class="bodyConfiguration__options">
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__star" value="star" checked> Star</label>
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__planet" value="planet"> Planet</label>
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__satellite" value="satellite"> Satellite</label>
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__blackhole" value="blackhole"> Black hole</label>
+        </div>
+        <div id="star" class="active">
+            <input type="text" id="star__name" placeholder="Star's name">
+            <label class="mass__label"><label class="mass__text">Mass<input type="range" name="star__range" id="star__range" min="5000" max="50000" value="15000" class="range"></label> <div class="range__value" id="star__value">15000</div></label>
+            <label>Color<input type="color" id="star__color" value="#ffffff"></label>
+
+        </div>
+        
+        <div id="planet" class="unactive">
+            <input type="text" id="planet__name" placeholder="Planet's name">
+            <label class="mass__label"><label class="mass__text">Mass<input type="range" name="planet__mass" id="planet_mass" min="10" max="1000" value="100" class="range"></label><div class="range__value" id="planet__value">100</div></label>
+            <label>Color<input type="color" id="planet__color" value="#77c9ff"></label>
+
+        </div>
+        
+        <div id="satellite"  class="unactive">
+            <input type="text" id="satellite__name" placeholder="Satellite's name">
+            <label>Mass<input type="range" name="satellite__mass" id="satellite_mass" min="0" max="0.01" value="0.01" disabled class="range"></label>
+        </div>
+        
+        <div id="blackhole"  class="unactive">
+            <input type="text" id="blackhole__name" placeholder="Black hole's name">
+            <label class="mass__label"><label class="mass__text">Mass<input type="range" name="blackhole__mass" id="blackhole_mass" min="100000" max="1000000" value="250000" class="range"></label> <div class="range__value" id="blackhole__value">250000</div></label>
+            <label>Color<input type="color" id="blackhole__color" value="#000000"></label>
+
+        </div>
+        <p class="hint">Set up an object, then click and drag your mouse on the map to launch it</p>
+    </section>
+    <section class="layoutManagement">
+        <h3>Layout Management</h3>
+
+        <div id="objects__list"></div>
+    </section>
+    <section class="environmentSettings">
+        <h3>Environment Settings</h3>
+               <button type="button" id="button__start">Start</button> 
+     
+        <label>Time Speed<input type="range" name="time__speed" id="time__speed" min="0.1" max="5" step="0.1" value="1" class="range"></label>
+
+       
+        <label> <input type="checkbox" id="chk__grid" checked>Engineering Mesh</label>
+        <label> <input type="checkbox" id="chk__vectors" checked>Vectors</label>
+        <label> <input type="checkbox" id="chk__trails" checked>Show Trails</label>
+
+               <button type="button" id="button__reset">Reset</button>
+
+    </section>
+
+
+    </aside>
+    <main>
+        <canvas id="c"></canvas>
+    </main>
+   
+</body>
+</html>

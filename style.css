@@ -1,0 +1,273 @@
+body{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+aside{
+    background-color: #1b1b1b;
+    width: 25%;
+    height: 100vh;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.mass__label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #00f2fe;
+}
+
+.mass__text{
+    color: #f5f5f5;
+}
+
+.active{
+    display: block;
+}
+
+.hint{
+    font-size: 90%;
+    color: #afafaf;
+    width: 80%;
+}
+
+.unactive{
+    display: none !important;
+}
+
+main{
+    background-color: #050505;
+    width: 75%;
+    height: 100vh;
+}
+
+.bodyConfiguration, .layoutManagement, .environmentSettings{
+    display: flex;
+    flex-direction: column;   
+    gap: 10px;
+    padding-left: 5%;
+    width: 100%;
+}
+
+#button__reset, #button__start{
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #0e0e0e;
+    color: #f5f5f5;
+    border-radius: 5px;
+}
+
+#button__reset:hover,#button__start:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s;
+    box-shadow: #00f2fe 0px 0px 3px;
+}
+
+#button__reset:active,#button__start:active{
+    cursor: pointer;
+    transform: scale(0.95);
+    transition: 0.2s;
+}
+
+.range {
+  -webkit-appearance: none;
+  border-radius: 1px;
+  background: #363636;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 15%;
+  background: #00f2fe;
+  cursor: pointer;
+  transition: 0.2s;
+
+}
+
+#objects__list{
+    background-color: #0e0e0e;
+    width: 80%;
+    height: 120px;
+    border-radius: 5px;
+    overflow-y:scroll;
+}
+
+.range::-webkit-slider-thumb:hover{
+    box-shadow: #00f2fe 0px 0px 10px;
+  transition: 0.2s;
+}
+
+.range::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 70%;
+  background: #00f2fe;
+  cursor: pointer;
+}
+
+#star__name, #planet__name,#satellite__name,#blackhole__name{
+    width: 80%;
+    background-color: #0e0e0e;
+    border: none;
+    color: #f5f5f5;
+    border-radius: 5px;
+    height: 25px;
+    transition: 0.2s;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+#star__name:hover, #planet__name:hover,#satellite__name:hover,#blackhole__name:hover{
+    box-shadow: #00f2fe 0px 0px 5px;
+    transition: 0.2s;
+}
+
+#star, #planet,#satellite,#blackhole{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+label{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+#star__color, 
+#planet__color, 
+#blackhole__color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;
+}
+
+#star__color::-webkit-color-swatch,
+#planet__color::-webkit-color-swatch,
+#blackhole__color::-webkit-color-swatch {
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#star__color::-moz-color-swatch,
+#planet__color::-moz-color-swatch,
+#blackhole__color::-moz-color-swatch {
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#aside__star, #aside__planet, #aside__satellite, #aside__blackhole,
+#chk__grid, #chk__vectors, #chk__trails {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background-color: #1e1e24;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+
+#aside__star:hover, #aside__planet:hover, #aside__satellite:hover, #aside__blackhole:hover,
+#chk__grid:hover, #chk__vectors:hover, #chk__trails:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: #25252d;
+}
+
+#aside__star:active, #aside__planet:active, #aside__satellite:active, #aside__blackhole:active,
+#chk__grid:active, #chk__vectors:active, #chk__trails:active {
+  transform: scale(0.9);
+}
+
+
+#aside__star, #aside__planet, #aside__satellite, #aside__blackhole {
+  border-radius: 50%;
+}
+
+
+#aside__star::after, #aside__planet::after, #aside__satellite::after, #aside__blackhole::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #fff; 
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0); 
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); 
+}
+
+#aside__star:checked, #aside__planet:checked, #aside__satellite:checked, #aside__blackhole:checked {
+  border-color: #fff;
+}
+
+#aside__star:checked::after, #aside__planet:checked::after, #aside__satellite:checked::after, #aside__blackhole:checked::after {
+  transform: translate(-50%, -50%) scale(1); /* Pokazuje kropkę */
+}
+
+
+#chk__grid, #chk__vectors, #chk__trails {
+  border-radius: 4px; 
+}
+
+
+#chk__grid::after, #chk__vectors::after, #chk__trails::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0; 
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+
+#chk__grid:checked, #chk__vectors:checked, #chk__trails:checked {
+  border-color: #fff;
+  background-color: #2d2d38; 
+}
+
+#chk__grid:checked::after, #chk__vectors:checked::after, #chk__trails:checked::after {
+  transform: rotate(45deg) scale(1);
+}
