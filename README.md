@@ -13,7 +13,6 @@ Unlike standard keyframe animations, this sandbox computes the interaction of al
 * **True N-Body Physics Engine:** Every object in the universe exerts a gravitational pull on every other object, allowing the simulation of complex binary star systems and orbital chaos.
 * **Intelligent Satellite Orbital Assist:** A real-time helper algorithm that dynamically computes the first cosmic velocity ($v_c$) relative to the nearest planet. It allows the user to snap satellites into perfect circular orbits with a single click.
 * **Mathematical Softening (Anti-Crash):** Implements a gravitational softening factor ($\epsilon$) within the vector code. This stabilizes calculations and prevents velocity spikes towards infinity (division by zero) during close physical encounters.
-* **Retro Pixel Art Style Rendering:** The simulation context bypasses native browser interpolation. By disabling image smoothing, all dedicated texture assets render with sharp, unfiltered, square pixels.
 
 ---
 
