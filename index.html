@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <script src="physics.js" defer></script>
+
 </head>
 <body> 
     
@@ -15,10 +14,10 @@
     <section class="bodyConfiguration">
         <h3>Body Configuration</h3>
         <div class="bodyConfiguration__options">
-        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__star" value="star" checked> Star</label>
-        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__planet" value="planet"> Planet</label>
-        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__satellite" value="satellite"> Satellite</label>
-        <label><input onclick="bodyConfiguration(this)" type="radio" name="type" id="aside__blackhole" value="blackhole"> Black hole</label>
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="object-type" id="aside__star" value="star" checked> Star</label>
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="object-type" id="aside__planet" value="planet"> Planet</label>
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="object-type" id="aside__satellite" value="satellite"> Satellite</label>
+        <label><input onclick="bodyConfiguration(this)" type="radio" name="object-type" id="aside__blackhole" value="blackhole"> Black hole</label>
         </div>
         <div id="star" class="active">
             <input type="text" id="star__name" placeholder="Star's name">
@@ -50,13 +49,15 @@
     <section class="layoutManagement">
         <h3>System Management</h3>
 
-        <div id="objects__list"></div>
+        <div id="objects__list">
+            <p class="hint" style="padding:5px;">No objects in orbit.</p>
+        </div>
     </section>
     <section class="environmentSettings">
         <h3>Environment Settings</h3>
-               <button type="button" id="button__start">Start</button> 
+               <button type="button" id="button__start">⏸ Pause</button> 
      
-        <label>Time Speed<input oninput="values()" id="time__speed" type="range" name="time__speed" min="0.1" max="5" step="0.1" value="1" class="range"> <div class="range__value" id="time__value">1x</div></label>
+        <label>Time Speed<input oninput="values()" id="time__speed" type="range" name="time__speed" min="0.1" max="10" step="0.1" value="1" class="range"> <div class="range__value" id="time__value">1x</div></label>
 
        
         <label> <input type="checkbox" id="chk__grid" checked>Engineering Mesh</label>
@@ -70,8 +71,10 @@
 
     </aside>
     <main>
-        <canvas id="c"></canvas>
+        <canvas id="space-canvas"></canvas>
     </main>
-   
+    
+    <script src="physics.js" defer></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
