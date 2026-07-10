@@ -2,8 +2,7 @@
 
 An interactive, physics-based N-body orbital mechanics simulator built with pure JavaScript and HTML5 Canvas. The system models multi-body gravitational fields in real-time using numerical integration, allowing complex astrophysical phenomena – like stable planetary systems, multi-moon captures, and orbital slingshots – to emerge naturally from fundamental physical equations.
 
-<img width="1897" height="940" alt="image" src="https://github.com/user-attachments/assets/a5908b1c-35dd-4b3d-b7e0-fa5584c40faa" />
-
+<img width="1899" height="944" alt="image" src="https://github.com/user-attachments/assets/c6760cc5-366e-4d68-9c3f-f7f3e05d27ee" />
 
 ---
 
@@ -25,6 +24,9 @@ The simulation features a high-tech engineering dashboard layout optimized for r
    **Engineering Vector Visualizer:** Real-time translucent vector overlays bound to each body, illustrating the current magnitude and direction of the velocity vector.
 * **Aura Glow Rendering:** Custom vector shadow-blur filtering mapped exclusively to specific stellar bodies (`type === 'star'`), replicating atmospheric star-glow without sacrificing global GPU rendering performance.
 
+## Future Development
+* **Cosmic Collisions & Events:** Supernova,  Gravitational Waves, Debris Fields.
+* **Particle System:** Implementing a lightweight engine for engine trails, explosions, and stardust effect.
 ---
 
 ## Tech Stack & Concepts
