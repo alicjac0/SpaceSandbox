@@ -2,7 +2,7 @@
 
 An interactive, physics-based N-body orbital mechanics simulator built with pure JavaScript and HTML5 Canvas. The system models multi-body gravitational fields in real-time using numerical integration, allowing complex astrophysical phenomena – like stable planetary systems, multi-moon captures, and orbital slingshots – to emerge naturally from fundamental physical equations.
 
-<img width="1486" height="748" alt="image" src="https://github.com/user-attachments/assets/75372dc9-faa7-420e-8f94-f98708728c6d" />
+<img width="1897" height="940" alt="image" src="https://github.com/user-attachments/assets/a5908b1c-35dd-4b3d-b7e0-fa5584c40faa" />
 
 
 ---
