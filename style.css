@@ -362,3 +362,52 @@ label {
 #chk__trails:checked::after {
   transform: rotate(45deg) scale(1);
 }
+
+
+.hint-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1b1b1b;
+    border: #25252d 0.5px solid; 
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+    max-width: 280px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.hint-icon {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.hint-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.hint-box:hover {
+    max-width: 350px;
+    background: #050505;
+    border: 0.5px solid #00f2fe; 
+}
+
+.hint-box:hover .hint-content {
+    max-height: 200px;
+    padding-bottom: 15px;
+    opacity: 1;
+}
+
+.hint-content p {
+    margin: 8px 0 0 0;
+    line-height: 1.4;
+    color: #cbd5e1;
+}

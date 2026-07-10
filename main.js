@@ -175,7 +175,7 @@ canvas.addEventListener('mouseup', (e) => {
 
     if (type === 'star') radius = starmass / 500
     if (type === 'planet') radius = planetmass / 10
-    if (type === 'blackhole') radius = 15
+    if (type === 'blackhole') radius = 25
   }
 
   const newBody = new CelestialBody(
@@ -209,7 +209,7 @@ function drawSlingShot() {
 }
 
 function drawEngineeringGrid() {
-  ctx.strokeStyle = '#161616'
+  ctx.strokeStyle = '#383838'
   ctx.lineWidth = 0.5
   const gridSize = 50
 
