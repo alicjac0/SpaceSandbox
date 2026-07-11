@@ -10,6 +10,12 @@ class CelestialBody {
     this.color = color
     this.radius = radius
     this.trail = []
+
+    if (this.type === 'blackhole') {
+      this.variant = Math.floor(Math.random() * 3)
+    } else {
+      this.variant = 0
+    }
   }
 
   updatePosition(dt) {
@@ -35,7 +41,13 @@ class CelestialBody {
       ctx.stroke()
       ctx.globalAlpha = 1.0
     }
-    const img = textures[this.type]
+    let img
+
+    if (Array.isArray(textures[this.type])) {
+      img = textures[this.type][this.variant]
+    } else {
+      img = textures[this.type]
+    }
 
     if (img && img.complete && img.naturalWidth !== 0) {
       ctx.drawImage(

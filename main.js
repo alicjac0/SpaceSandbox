@@ -2,11 +2,13 @@ const bodies = ['star', 'planet', 'satellite', 'blackhole']
 
 const textures = {
   satellite: new Image(),
-  blackhole: new Image(),
+  blackhole: [new Image(), new Image(), new Image()],
 }
 
 textures.satellite.src = 'images/satellite.png'
-textures.blackhole.src = 'images/blackhole.png'
+textures.blackhole[0].src = 'images/blackhole.png'
+textures.blackhole[1].src = 'images/blackhole2.png'
+textures.blackhole[2].src = 'images/blackhole3.png'
 
 function bodyConfiguration(input) {
   const chosenBody = input.value
@@ -40,6 +42,9 @@ values()
 const canvas = document.getElementById('space-canvas')
 const ctx = canvas.getContext('2d')
 
+ctx.imageSmoothingEnabled = false
+ctx.mozImageSmoothingEnabled = false
+
 let universe = []
 let isPaused = false
 
@@ -54,6 +59,8 @@ let mouse = {
 function resizeCanvas() {
   canvas.width = canvas.clientWidth
   canvas.height = canvas.clientHeight
+  ctx.imageSmoothingEnabled = false
+  ctx.mozImageSmoothingEnabled = false
 }
 
 window.addEventListener('resize', resizeCanvas)
@@ -175,7 +182,7 @@ canvas.addEventListener('mouseup', (e) => {
 
     if (type === 'star') radius = starmass / 500
     if (type === 'planet') radius = planetmass / 10
-    if (type === 'blackhole') radius = 25
+    if (type === 'blackhole') radius = blackholemass / 10000
   }
 
   const newBody = new CelestialBody(
