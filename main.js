@@ -182,7 +182,7 @@ canvas.addEventListener('mouseup', (e) => {
 
     if (type === 'star') radius = starmass / 500
     if (type === 'planet') radius = planetmass / 10
-    if (type === 'blackhole') radius = blackholemass / 10000
+    if (type === 'blackhole') radius = 50
   }
 
   const newBody = new CelestialBody(
